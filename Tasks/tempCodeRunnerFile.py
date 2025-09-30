@@ -1,5 +1,6 @@
+[[11, 3, 10], [23, 45, 67], [89, 12, 90], [11, 78, 44]])
 
-curr.execute("select * from employees")
+a = np.array([2, 3, 4])
 
-for row in curr.fetchall():
-    print(row)
+result = arr + a
+print(result)
