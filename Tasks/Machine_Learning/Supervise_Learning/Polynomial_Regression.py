@@ -2,8 +2,10 @@ import pandas as pd
 import numpy as np
 from sklearn.linear_model import LinearRegression
 import matplotlib.pyplot as plt
-from matplotlib import style 
+from matplotlib import style
 import seaborn as sns
+from sklearn.preprocessing import PolynomialFeatures
+
 
 style.use('ggplot')
 
@@ -12,8 +14,8 @@ warnings.filterwarnings('ignore')
 
 # %matplotlib inline
 
-df = pd.read_csv("Machine Learning/SupervisedLearning/position.csv")
-print("DataFrame:",df)
+df = pd.read_csv("Tasks/Machine_Learning/Supervise_Learning/datasets/Ice_cream selling data.csv")
+print("Dataset : \n",df.head())
 
 print("Duplicate Rows:",df.duplicated().sum())
 
@@ -24,5 +26,5 @@ print(df.info())
 
 
 plt.figure(figsize=(12,6), dpi=200)#dot per inch
-sns.scatterplot(x='Level', y='Salary', data=df, color='blue')
+sns.scatterplot(x='Temperature (°C)', y='Ice Cream Sales (units)', data=df, color='blue')
 plt.show()

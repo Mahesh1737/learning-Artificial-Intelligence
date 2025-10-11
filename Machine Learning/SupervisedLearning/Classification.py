@@ -2,6 +2,7 @@ from sklearn.metrics import confusion_matrix, accuracy_score, precision_score, r
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
+
 #Step 1: Sample actual and predicted values
 #1 - Positive class, Negative class
 y_true = [1, 0, 1, 1, 0, 1, 0, 0, 1, 1] # actual
@@ -12,6 +13,7 @@ FP = cm[0][1]
 TP = cm[1][1]
 TN = cm[0][0]
 FN = cm[1][0]
+
 print("Confusion Matrix:")
 print(cm)
 
